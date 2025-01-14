@@ -2,15 +2,17 @@ import Link from "next/link";
 
 export default function Nav() {
     return (
-        <nav className="fixed top-0 left-0 right-0 w-full border-opacity-20 bg-black bg-opacity-10 backdrop-blur-sm z-1000 drop-shadow-2xl">
-            <ul className="flex justify-center items-center gap-5 px-4 py-7 font-bold">
-                <li className="flex text-2xl gap-4">
-                    <Link href="/">Inicio</Link>
-                    <Link href="/">Sobre</Link>
-                    <Link href="/">Projetos</Link>
-                    <Link href="/">Contato</Link>
-                </li>
-            </ul>
+        <nav className="fixed top-0 w-full backdrop-blur-sm bg-black/20 z-50">
+            <div className="container mx-auto px-6 py-3">
+                <div className="flex items-center justify-around">
+                    <div className="flex space-x-4 text-xl gap-5 px-4 py-2">
+                        <Link href="#inicio" className="text-white hover:text-gray-300">Início</Link>
+                        <Link href="#sobre" className="text-white hover:text-gray-300">Sobre</Link>
+                        <Link href="#projetos" className="text-white hover:text-gray-300">Projetos</Link>
+                        <Link href="#contato" className="text-white hover:text-gray-300">Contato</Link>
+                    </div>
+                </div>
+            </div>
         </nav>
     )
 }
