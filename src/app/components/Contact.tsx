@@ -4,23 +4,23 @@ import React from 'react';
 
 export default function Contact() {
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center gap-8 p-4 md:p-8 bg-[url('/img/background2.jpg')] bg-cover bg-center" id="contato">
+        <section className="min-h-screen flex flex-col items-center justify-center gap-6 sm:gap-8 p-4 sm:p-8 bg-[url('/img/background2.jpg')] bg-cover bg-center" id="contato">
             {/* Bloco de Contato */}
-            <div className="max-w-4xl w-full grid md:grid-cols-2 gap-8 bg-black/40 backdrop-blur-sm rounded-xl p-6">
+            <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 bg-black/40 backdrop-blur-sm rounded-xl p-4 sm:p-6">
                 {/* Coluna da esquerda */}
-                <div className="space-y-4">
-                    <h2 className="text-3xl font-bold text-white">Contato</h2>
-                    <p className="text-zinc-200">
-                        Precisa entrar em contato? Preencha o formulário ao lado ou envie um email para{' '}
+                <div className="space-y-3 sm:space-y-4">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white">Contato</h2>
+                    <p className="text-zinc-200 text-sm sm:text-base">
+                        Precisa entrar em contato? Preencha o formulário ou envie um email para{' '}
                         <span className="text-indigo-300 hover:text-indigo-200 cursor-pointer">
                             paulovcsiqueira@gmail.com
                         </span>
                     </p>
                 </div>
 
-                {/* Coluna do formulário */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
+                {/* Formulário ajustado para mobile */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 space-y-3 sm:space-y-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <div>
                             <label htmlFor="firstName" className="block text-sm mb-1 text-white">
                                 Nome*
@@ -72,20 +72,20 @@ export default function Contact() {
             </div>
 
             {/* Bloco de Redes Sociais */}
-            <div className="max-w-4xl w-full bg-black/40 backdrop-blur-sm rounded-xl p-6">
-                <div className="space-y-4">
-                    <h2 className="text-3xl font-bold text-white">Redes Sociais</h2>
-                    <p className="text-zinc-200 mb-4">
+            <div className="max-w-4xl w-full bg-black/40 backdrop-blur-sm rounded-xl p-4 sm:p-6">
+                <div className="space-y-3 sm:space-y-4">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white">Redes Sociais</h2>
+                    <p className="text-zinc-200 text-sm sm:text-base mb-3 sm:mb-4">
                         Você pode me encontrar nas redes sociais abaixo:
                     </p>
                     <div className="flex gap-4">
                         <Link href="https://github.com/paulovc26" target="_blank" rel="noopener noreferrer"
                             className="text-white hover:text-slate-400 transition-colors">
-                            <IconBrandGithubFilled size={32} />
+                            <IconBrandGithubFilled size={28} className="sm:w-8 sm:h-8" />
                         </Link>
                         <Link href="https://linkedin.com/in/paulovcsiqueira" target="_blank" rel="noopener noreferrer"
-                            className="text-white hover:text-slate-400 transition-colors text-lg">
-                            <IconBrandLinkedinFilled size={32} />
+                            className="text-white hover:text-slate-400 transition-colors">
+                            <IconBrandLinkedinFilled size={28} className="sm:w-8 sm:h-8" />
                         </Link>
                     </div>
                 </div>
