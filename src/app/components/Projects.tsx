@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Projects() {
     return (
         <section className="min-h-screen py-16 sm:py-24" id="projetos">
@@ -8,11 +10,14 @@ export default function Projects() {
                         {/* Projeto 1 */}
                         <div className="bg-slate-200 rounded overflow-hidden shadow-lg transform transition-transform hover:scale-105">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img className="w-full h-40 sm:h-48 object-cover" src="/img/background11.jpg" alt="Projeto Bowenhuis" />
+                            <img className="w-full h-40 sm:h-48 object-cover" src="/img/projeto2.png" alt="Projeto Bowenhuis" />
                             <div className="px-4 sm:px-6 py-4">
-                                <div className="font-bold text-lg sm:text-xl mb-2 text-black">Bowenhuis</div>
+                                <div className="font-bold text-lg sm:text-xl mb-2 text-black">Bouwenhuis</div>
                                 <p className="text-gray-700 text-sm sm:text-base">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Landing Page de uma construtora.
+                                </p>
+                                <p className="text-gray-700 text-sm sm:text-base">
+                                    Tecnologias: Angular. <Link href="https://bouwenhuis.netlify.app/" target="_blank" className="hover:text-blue-950">👉 Ver</Link>
                                 </p>
                             </div>
                         </div>
@@ -20,11 +25,16 @@ export default function Projects() {
                         {/* Projeto 2 */}
                         <div className="bg-slate-200 rounded overflow-hidden shadow-lg transform transition-transform hover:scale-105">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img className="w-full h-40 sm:h-48 object-cover" src="/img/background11.jpg" alt="API Gestão" />
+                            <Link href="https://github.com/paulovc26/gestao_backend" target="_blank" rel="noopener noreferrer">
+                                <img className="w-full h-40 sm:h-48 object-cover" src="/img/projeto1.png" alt="API Gestão" />
+                            </Link>
                             <div className="px-4 sm:px-6 py-4">
                                 <div className="font-bold text-lg sm:text-xl mb-2 text-black">API - Gestão Empresarial</div>
                                 <p className="text-gray-700 text-sm sm:text-base">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    API para gestão empresarial, com controle de usuários, contratos, clientes e fornecedores.
+                                </p>
+                                <p className="text-gray-700 text-sm sm:text-base">
+                                    Tecnologias: Node.js, Express, MySQL, Docker, Swagger. <Link href="https://gestaobackend-production.up.railway.app" target="_blank" className="hover:text-blue-950">👉 Ver</Link>
                                 </p>
                             </div>
                         </div>
@@ -32,11 +42,11 @@ export default function Projects() {
                         {/* Projeto 3 */}
                         <div className="bg-slate-200 rounded overflow-hidden shadow-lg transform transition-transform hover:scale-105">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img className="w-full h-40 sm:h-48 object-cover" src="/img/background11.jpg" alt="Projeto 3" />
+                            <img className="w-full h-40 sm:h-48 object-cover" src="/img/projeto3.png" alt="Projeto 3" />
                             <div className="px-4 sm:px-6 py-4">
-                                <div className="font-bold text-lg sm:text-xl mb-2 text-black">Projeto 3</div>
+                                <div className="font-bold text-lg sm:text-xl mb-2 text-black">Portal SisCon <p className="text-emerald-900">(Em desenvolvimento)</p></div>
                                 <p className="text-gray-700 text-sm sm:text-base">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Portal Full Stack de Gestão empresarial, com controle de usuários, contratos, clientes e fornecedores.
                                 </p>
                             </div>
                         </div>

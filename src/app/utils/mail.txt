@@ -1,0 +1,35 @@
+// pages/api/sendEmail.ts
+import nodemailer from "nodemailer";
+
+export default async function handler(req: any, res: any) {
+  if (req.method === "POST") {
+    const { email, assunto, message } = req.body;
+
+    // Configuração do Nodemailer
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "seu-email@gmail.com",
+        pass: "sua-senha-do-email", // Use variáveis de ambiente para segurança
+      },
+    });
+
+    const mailOptions = {
+      from: email, // De onde vem o e-mail
+      to: "paulovcsiqueira@gmail.com", // Destinatário
+      subject: assunto, // Assunto
+      text: message, // Texto do e-mail
+      html: `<p>${message}</p>`, // HTML do e-mail
+    };
+
+    try {
+      await transporter.sendMail(mailOptions);
+      res.status(200).json({ message: "E-mail enviado com sucesso!" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Erro ao enviar o e-mail." });
+    }
+  } else {
+    res.status(405).json({ message: "Método não permitido" });
+  }
+}
