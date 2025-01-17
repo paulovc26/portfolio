@@ -79,7 +79,7 @@ import { EmailTemplate } from "@/app/components/common/EmailTemplate";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend("re_XAi4Yy6z_2Hk5nPAiCWUAJJMsg463bVyC");
 
 export async function POST(req: NextRequest) {
   try {
