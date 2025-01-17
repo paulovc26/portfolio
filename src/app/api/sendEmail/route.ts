@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
     const { email, assunto, message } = await req.json();
 
     // Adicionando logs para verificar os dados recebidos
-    console.log("Dados recebidos:", { email, assunto, message });
+    // console.log("Dados recebidos:", { email, assunto, message });
 
     if (!email || !assunto || !message) {
       return NextResponse.json(
@@ -103,13 +103,16 @@ export async function POST(req: NextRequest) {
     });
 
     if (error) {
-      console.error("Erro ao enviar e-mail:", error);
+      // console.error("Erro ao enviar e-mail:", error);
       return NextResponse.json({ error }, { status: 500 });
     }
 
     return NextResponse.json(data, { status: 200 });
-  } catch (error: any) {
-    console.error("Erro no servidor:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error) {
+    // console.error("Erro no servidor:", error);
+    return NextResponse.json(
+      { error: (error as Error).message },
+      { status: 500 }
+    );
   }
 }

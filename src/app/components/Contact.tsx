@@ -20,7 +20,7 @@ export default function Contact() {
 
         const data = { email, assunto, message };
 
-        console.log('Dados do formulário:', data); // Adicionando log para verificar os dados
+        // console.log('Dados do formulário:', data); // Adicionando log para verificar os dados
 
         try {
             const res = await fetch('/api/sendEmail', {
@@ -33,15 +33,15 @@ export default function Contact() {
 
             const result = await res.json();
             if (res.ok) {
-                console.log('Email enviado com sucesso:', result);
+                // console.log('Email enviado com sucesso:', result);
                 setSuccessMessage('Email enviado com sucesso!');
             } else {
-                console.error('Erro ao enviar e-mail:', result);
+                // console.error('Erro ao enviar e-mail:', result);
                 setErrorMessage(result.message || 'Erro ao enviar o e-mail');
             }
 
         } catch (error) {
-            console.error('Erro ao enviar o e-mail:', error);
+            // console.error('Erro ao enviar o e-mail:', error);
             setErrorMessage('Erro ao enviar o e-mail');
         } finally {
             setIsSubmitting(false);
