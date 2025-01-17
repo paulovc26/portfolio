@@ -41,7 +41,7 @@ export default function Contact() {
             }
 
         } catch (error) {
-            // console.error('Erro ao enviar o e-mail:', error);
+            console.error('Erro ao enviar o e-mail:', error);
             setErrorMessage('Erro ao enviar o e-mail');
         } finally {
             setIsSubmitting(false);
