@@ -1,5 +1,5 @@
 
-import { IconBrandAngular, IconBrandAngularFilled, IconBrandCss3, IconBrandDocker, IconBrandHtml5, IconBrandJavascript, IconBrandMongodb, IconBrandMysql, IconBrandNextjs, IconBrandNodejs, IconBrandPhp, IconBrandSupabase, IconBrandTypescript, IconFileTypeCss, IconSql } from "@tabler/icons-react";
+import { IconBrandAngularFilled, IconBrandCss3, IconBrandDocker, IconBrandHtml5, IconBrandJavascript, IconBrandMongodb, IconBrandMysql, IconBrandNextjs, IconBrandNodejs, IconBrandPhp, IconBrandSupabase, IconBrandTypescript, IconSql } from "@tabler/icons-react";
 import Image from "next/image";
 
 export default function About() {
