@@ -44,7 +44,7 @@ export default function Projects() {
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img className="w-full h-40 sm:h-48 object-cover" src="/img/projeto3.png" alt="Projeto 3" />
                             <div className="px-4 sm:px-6 py-4">
-                                <div className="font-bold text-lg sm:text-xl mb-2 text-black">Portal SisCon <p className="text-emerald-900">(Em desenvolvimento)</p></div>
+                                <div className="font-bold text-lg sm:text-xl mb-2 text-black">Portal Gestão Contratual <p className="text-emerald-900">(Em desenvolvimento)</p></div>
                                 <p className="text-gray-700 text-sm sm:text-base">
                                     Portal Full Stack de Gestão empresarial, com controle de usuários, contratos, clientes e fornecedores.
                                 </p>
