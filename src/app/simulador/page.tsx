@@ -43,54 +43,57 @@ export default function SimuladorPage() {
     }
 
     return (
-        <div style={{ padding: 24 }}>
-            <h1>Simulador de Parcelas</h1>
+        <section className="min-h-screen flex flex-col items-left gap-6 sm:gap-8 p-4 sm:p-8 bg-white bg-cover bg-center">
 
-            <label>
-                Prazo (meses):
-                <input type="number" value={prazo} onChange={(e) => setPrazo(Number(e.target.value))} />
-            </label>
-            <br /><br />
+            <div style={{ padding: 24, backgroundColor: '#fff', color: '#000', fontFamily: 'Arial' }}>
+                <h1 className="text-4xl">Simulador de Parcelas</h1>
 
-            <label>
-                Data da 1ª parcela:
-                <input type="date" value={primeiraParcela} onChange={(e) => setPrimeiraParcela(e.target.value)} />
-            </label>
-            <br /><br />
+                <label>
+                    Prazo (meses):
+                    <input type="number" value={prazo} onChange={(e) => setPrazo(Number(e.target.value))} />
+                </label>
+                <br /><br />
 
-            <label>Benefício de Aniversário:</label>
-            <input type="radio" name="beneficio" value="sim" checked={beneficio === 'sim'} onChange={() => setBeneficio('sim')} /> Sim
-            <input type="radio" name="beneficio" value="nao" checked={beneficio === 'nao'} onChange={() => setBeneficio('nao')} /> Não
-            <br /><br />
+                <label>
+                    Data da 1ª parcela:
+                    <input type="date" value={primeiraParcela} onChange={(e) => setPrimeiraParcela(e.target.value)} />
+                </label>
+                <br /><br />
 
-            <label>
-                Mês de Aniversário:
-                <select value={mesAniversario} onChange={(e) => setMesAniversario(Number(e.target.value))}>
-                    {Array.from({ length: 12 }, (_, i) => (
-                        <option key={i + 1} value={i + 1}>{i + 1}</option>
-                    ))}
-                </select>
-            </label>
-            <br /><br />
+                <label>Benefício de Aniversário:</label>
+                <input type="radio" name="beneficio" value="sim" checked={beneficio === 'sim'} onChange={() => setBeneficio('sim')} /> Sim
+                <input type="radio" name="beneficio" value="nao" checked={beneficio === 'nao'} onChange={() => setBeneficio('nao')} /> Não
+                <br /><br />
 
-            <button onClick={handleCalcular}>Calcular</button>
-
-            {cronograma.length > 0 && (
-                <div style={{ marginTop: 24 }}>
-                    <h2>Resultado</h2>
-                    <p><strong>Data da 1ª parcela:</strong> {new Date(primeiraParcela).toLocaleDateString('pt-BR')}</p>
-                    <p><strong>Data da última parcela:</strong> {cronograma[cronograma.length - 1].vencimento.toLocaleDateString('pt-BR')}</p>
-
-                    <h3>Parcelas:</h3>
-                    <ul>
-                        {cronograma.map((p) => (
-                            <li key={p.parcela}>
-                                Parcela {p.parcela} - {p.vencimento.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' })}
-                            </li>
+                <label>
+                    Mês de Aniversário:
+                    <select value={mesAniversario} onChange={(e) => setMesAniversario(Number(e.target.value))}>
+                        {Array.from({ length: 12 }, (_, i) => (
+                            <option key={i + 1} value={i + 1}>{i + 1}</option>
                         ))}
-                    </ul>
-                </div>
-            )}
-        </div>
+                    </select>
+                </label>
+                <br /><br />
+
+                <button onClick={handleCalcular}>Calcular</button>
+
+                {cronograma.length > 0 && (
+                    <div style={{ marginTop: 24 }}>
+                        <h2>Resultado</h2>
+                        <p><strong>Data da 1ª parcela:</strong> {new Date(primeiraParcela).toLocaleDateString('pt-BR')}</p>
+                        <p><strong>Data da última parcela:</strong> {cronograma[cronograma.length - 1].vencimento.toLocaleDateString('pt-BR')}</p>
+
+                        <h3>Parcelas:</h3>
+                        <ul>
+                            {cronograma.map((p) => (
+                                <li key={p.parcela}>
+                                    Parcela {p.parcela} - {p.vencimento.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' })}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </div>
+        </section>
     );
 }
