@@ -1,5 +1,4 @@
 import { Poppins } from 'next/font/google';
-import './simulador.css';
 import { Metadata } from 'next';
 
 const poppins = Poppins({
