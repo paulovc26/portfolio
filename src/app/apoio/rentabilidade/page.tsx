@@ -178,14 +178,7 @@ export default function RentabilidadeForm() {
     return (
         <main className="min-h-screen bg-gray-50 p-4 font-sans text-gray-900">
             <div className="mx-auto w-full max-w-5xl py-8">
-                <div className="mb-4">
-                    <a
-                        className="text-lg text-blue-600 hover:text-blue-800"
-                        href="/apoio"
-                    >
-                        ← Voltar
-                    </a>
-                </div>
+
 
                 <div className="rounded-2xl bg-white p-6 shadow-md">
                     <h1 className="mb-2 text-center text-2xl font-bold">
