@@ -39,17 +39,17 @@ const PRODUTOS: ProdutoRdc[] = [
     {
         nome: 'RDC-i',
         taxa: '100% do CDI',
-        rentabilidadeMensal: 0.012152,
+        rentabilidadeMensal: 0.010931,
     },
     {
         nome: 'RDC-q',
         taxa: 'CDI + 0,15% a.a.',
-        rentabilidadeMensal: 0.012291,
+        rentabilidadeMensal: 0.011058,
     },
     {
         nome: 'RDC-sq',
         taxa: 'CDI + 0,35% a.a.',
-        rentabilidadeMensal: 0.012475,
+        rentabilidadeMensal: 0.011226,
     },
 ];
 
